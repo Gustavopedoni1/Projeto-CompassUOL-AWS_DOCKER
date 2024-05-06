@@ -132,5 +132,19 @@ sudo chown -R ec2-user:ec2-user /home/ec2-user/docker-compose.yaml
 sudo docker-compose -f /home/ec2-user/docker-compose.yaml up -d
 ```
 
+# Criando Load Balancer 
+
+• No painel do EC2 na AWS, selecionei o menu Load Balancers no lado esquerdo da tela;
+Em __Criar Load Balancer__, nomei, mantive a opção __Voltado para a Internet__ marcada, em __Mapeamento de Rede__ selecionei a VPC criada para a atividade, assim como as subredes públicas de cada AZ, selecionei o Grupo de Segurança já criado para o serviço e em Listeners e roteamento adicionei um grupo de destino (não tinha grupo então criei um selecionando uma instancia inicializada com o modelo de execução citado a cima).
+
+# Criando o Auto Scaling 
+
+• No painel de ECS na AWS selecionei o menu Grupos do __Auto Scaling__, no lado esquerdo da tela, e a opção __Criar grupo do Auto Scaling__, criei um nome para o Auto Scaling e selecionei o Modelo de Execução criado,selecionei a VPC da atividade e duas subnets públicas. Em __Balanceamento de Carga__ marquei a opção __Anexar a um balanceador de carga existente__ para selecionar o Load Balancer criado anteriormente. Na pagina de configurações deixei:
+Capacidade desejada: 2
+Capacidade mínima desejada: 2
+Capacidade máxima desejada: 2
+Não fiz mais alterações finalizei a criação.
+
+
 
 

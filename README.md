@@ -159,6 +159,9 @@ Não fiz mais alterações finalizei a criação.
 
 • Configurando o Link (dns) do Load Balancers no wordpress:
 
-- Acessando o Wordpress com o ip de uma das instâncias, no painel admin em configurações/geral os campos Endereço Worpdress(URL) e Endereço do site(URL) veremos o IP que deve ser substituidos pelo DNS do Load Balancer. Caso não configure o Load Balancer vai mandar sempre para o mesmo Servidor, se o servidor cair perde a aplicação.
+- Acessando o Wordpress com o ip de uma das instâncias, no painel admin em configurações/geral nos campos Endereço Worpdress(URL) e Endereço do site(URL) veremos o IP que **deve ser substituidos pelo DNS do Load Balancer.**
+![wordpresswrl](https://github.com/Gustavopedoni1/Projeto-CompassUOL-AWS_DOCKER/assets/157602238/398fae39-5b5d-4129-aa60-0ce18d6fa36a)
+ 
+Caso não configure o Load Balancer vai mandar sempre para o mesmo Servidor, se o servidor cair perde a aplicação.
 
 

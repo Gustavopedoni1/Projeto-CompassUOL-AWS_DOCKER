@@ -145,6 +145,20 @@ Capacidade mínima desejada: 2
 Capacidade máxima desejada: 2
 Não fiz mais alterações finalizei a criação.
 
+# Inicializando a instancia 
 
+• Tendo em vista que o Auto Scaling criou duas instâncias, escolhi uma e com seu ip fiz um acesso via SSH.
+
+• Estando dentro da instância fiz algumas configurações:
+
+- Usei o comando ``` docker ps ``` para ver o container que estava rodando, e usei o ``` docker exec -it containerID /bin/bash ```
+
+• De dentro do Container:
+
+- Atualizei os pacotes com ``` apt-get update``` e instalei o MySQL com o comando ```apt-get install default-mysql-client -y``` acessei o banco de dados com ``` mysql -h [ENDPOINTDORDS] -u [NomedoUsuárioPrincipal] -p ``` e estando dentro do banco de dados criei o database ``` create database wordpress``` para o o wordpress usar, __nas proximas instâncias que o auto scaling subir essas configurações não serão necessárias__.
+
+• Configurando o Link (dns) do Load Balancers no wordpress:
+
+- Acessando o Wordpress com o ip de uma das instâncias, no painel admin em configurações/geral os campos Endereço Worpdress(URL) e Endereço do site(URL) veremos o IP que deve ser substituidos pelo DNS do Load Balancer. Caso não configure o Load Balancer vai mandar sempre para o mesmo Servidor, se o servidor cair perde a aplicação.
 
 

@@ -145,7 +145,7 @@ Capacidade mínima desejada: 2
 Capacidade máxima desejada: 2
 Não fiz mais alterações finalizei a criação.
 
-# Inicializando a instancia 
+# Inicializando a instância 
 
 • Tendo em vista que o Auto Scaling criou duas instâncias, escolhi uma e com seu ip fiz um acesso via SSH.
 

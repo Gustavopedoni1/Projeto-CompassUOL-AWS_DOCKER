@@ -40,10 +40,10 @@ services:
       - "80:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: database-1.c1s8e2si6kq9.us-east-1.rds.amazonaws.com
-      WORDPRESS_DB_USER: admin
-      WORDPRESS_DB_PASSWORD: teste1234
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST: _______
+      WORDPRESS_DB_USER: ______
+      WORDPRESS_DB_PASSWORD: _______
+      WORDPRESS_DB_NAME: _______
 EOF
 
 # Executar o Docker Compose
